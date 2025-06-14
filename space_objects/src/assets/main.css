@@ -1,10 +1,95 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+ 
+  padding: 1rem;
   font-weight: normal;
+}
+
+html {
+  font-size: 12px;
+}
+
+.text {
+  font-family: "Roboto";
+  font-weight: 300;
+
+}
+
+.card-border
+{
+  border: 1px solid grey; 
+  border-radius: 10px
+}
+
+.base_text {
+  font-family: "Roboto";
+  font-weight: 300;
+  color: var(--base-color)
+}
+
+.countcolor
+{
+  color:rgb(75, 61, 193)
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+.heading {
+  font-size: 2rem;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+.heading-bold {
+  font-size: 2rem;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
+.sub-heading-bold {
+  font-size: 1.5rem;
+  font-family: "Roboto";
+  font-weight: 800;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: rgb(5, 158, 172);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+.base_color {
+  background-color: var(--base-color) !important;
+  box-shadow: 5px 5px 1px hsla(197, 4%, 69%, 0.441) !important;
+  transition: background-color 0.5s, box-shadow 0.5s !important;
+  text-transform: none !important;
+
+}
+
+.base_color:hover {
+  background-color: var(--base-color) !important;
+  box-shadow: 5px 5px 10px var(--base-color) !important;
+
+
+
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(201, 90%, 44%, 0.441);
+  }
+}
+
+.tn {
+  text-transform: none !important;
 }
 
 a,
@@ -20,16 +105,39 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
+.scroller {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.scroller::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+/* Customize the scrollbar thumb */
+.scroller::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/* Change color on hover */
+.scroller::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Optional: make scrollbar thinner */
+.scroller::-webkit-scrollbar {
+  width: 12px;
+}
+
+.user {
+  height: 32%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.listRow {
+  background-color: #333333;
 }
