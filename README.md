@@ -1,11 +1,11 @@
 # Vue_anandu_s_gopi
 project for digantare
 
-# for installing the project
+# To install the project
 
  npm install
 
-# for run the project
+# To run the project
 
  npm run dev
 
