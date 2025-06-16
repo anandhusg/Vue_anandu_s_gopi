@@ -5,7 +5,7 @@ project for digantare
 
  npm install
 
- for run the project
+# for run the project
 
  npm run dev
 
