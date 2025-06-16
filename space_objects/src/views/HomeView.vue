@@ -33,7 +33,7 @@
         <v-col cols="12" md="9">
           <v-row class="mb-10 mr-1">
             <v-col class="card-border">
-              <v-row class="text mb-5" >
+              <v-row class="text mb-5">
                 <v-col cols="2"
                   ><v-btn variant="" @click="sortTable('name')">
                     Name</v-btn
@@ -41,13 +41,13 @@
                 >
                 <v-col cols="2"
                   ><v-btn variant="" text @click="sortTable('noradCatId')"
-                    >Norad CatId <v-icon>mdi-arrow-down</v-icon> </v-btn
-                  ></v-col
+                    >Norad CatId <v-icon>mdi-arrow-down</v-icon>
+                  </v-btn></v-col
                 >
                 <v-col cols="1"
                   ><v-btn variant="" text @click="sortTable('orbitCode')"
-                    >Orbit Code <v-icon>mdi-arrow-down</v-icon> </v-btn
-                  ></v-col
+                    >Orbit Code <v-icon>mdi-arrow-down</v-icon>
+                  </v-btn></v-col
                 >
                 <v-col cols="2"
                   ><v-btn variant="" text>Object Type</v-btn></v-col
@@ -73,20 +73,20 @@
                 v-if="filteredSatellites.length > 0"
                 class="scroller text"
                 :items="filteredSatellites"
-                :item-size="20"
+                :item-size="10"
                 key-field="noradCatId"
               >
                 <template #default="{ item, index }">
                   <v-row class="mt-1 listRow">
-                    <v-col justify="center" cols="2" class="pl-5">
+                    <v-col cols="2" class="pl-5 d-flex align-center" d-flex align-center>
                       {{ item.name }}
                     </v-col>
-                    <v-col cols="2" class="pl-5"> {{ item.noradCatId }} </v-col>
-                    <v-col cols="1" class="pl-5"> {{ item.orbitCode }}</v-col>
-                    <v-col cols="2" class="pl-5"> {{ item.objectType }}</v-col>
-                    <v-col cols="2" class="pl-5"> {{ item.countryCode }}</v-col>
-                    <v-col cols="2" class="pl-5"> {{ item.launchDate }}</v-col>
-                    <v-col cols="1" class="pl-5">
+                    <v-col cols="2" class="pl-5 d-flex align-center" > {{ item.noradCatId }} </v-col>
+                    <v-col cols="1" class="pl-5 d-flex align-center"> {{ item.orbitCode }}</v-col>
+                    <v-col cols="2" class="pl-5 d-flex align-center"> {{ item.objectType }}</v-col>
+                    <v-col cols="2" class="pl-5 d-flex align-center"> {{ item.countryCode }}</v-col>
+                    <v-col cols="2" class="pl-5 d-flex align-center"> {{ item.launchDate }}</v-col>
+                    <v-col cols="1" class="pl-5 d-flex align-center">
                       <v-checkbox
                         hide-details
                         density="compact"
@@ -104,15 +104,16 @@
                   <h1>
                     <!-- <v-img height="200px" src="https://i.gifer.com/ZZ5H.gif">
                     </v-img> -->
-                    <v-img height="200px" src="https://i.pinimg.com/originals/3e/80/39/3e8039242e517ee7edc05a4e226e0b80.gif">
+                    <v-img
+                      height="200px"
+                      src="https://i.pinimg.com/originals/3e/80/39/3e8039242e517ee7edc05a4e226e0b80.gif"
+                    >
                     </v-img>
-                   
                   </h1>
                 </v-col>
-                <v-col align="center" class=" sub-heading-bold pb-10">
+                <v-col align="center" class="sub-heading-bold pb-10">
                   Loading...!
                 </v-col>
-
               </v-row>
             </v-col>
           </v-row>
@@ -157,7 +158,9 @@
           <v-row class="card-border mt-6">
             <v-col cols="12">
               <v-icon size="30" color="primary">mdi-check</v-icon> &nbsp;
-              <span class="sub-heading-bold"> {{selectedItems.length}} Selected Items </span>
+              <span class="sub-heading-bold">
+                {{ selectedItems.length }} Selected Items
+              </span>
             </v-col>
             <v-col cols="12" v-for="(item, i) in selectedItems" :key="i">
               {{ item.name }}
@@ -236,7 +239,7 @@ const whole_data = ref<Satellite[]>([]);
 
 const filteredSatellites = computed<Satellite[]>(() => satellite_data.value);
 
-const sortKey = ref<keyof Satellite | "">('');
+const sortKey = ref<keyof Satellite | "">("");
 const sortDirection = ref(1);
 
 onMounted(() => {
@@ -303,8 +306,7 @@ function filterSatellites() {
     arr.sort((a, b) => {
       if (a[sortKey.value]! < b[sortKey.value]!)
         return -1 * sortDirection.value;
-      if (a[sortKey.value]! > b[sortKey.value]!)
-        return 1 * sortDirection.value;
+      if (a[sortKey.value]! > b[sortKey.value]!) return 1 * sortDirection.value;
 
       return 0;
     });
@@ -343,12 +345,10 @@ function saveToLocal() {
   localStorage.setItem("saved_data", JSON.stringify(selectedItems.value));
 
   router.push("/about");
-
 }
 </script>
 
 
 
 <style scoped>
-
 </style>
