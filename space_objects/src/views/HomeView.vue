@@ -41,12 +41,12 @@
                 >
                 <v-col cols="2"
                   ><v-btn variant="" text @click="sortTable('noradCatId')"
-                    >Norad CatId</v-btn
+                    >Norad CatId <v-icon>mdi-arrow-down</v-icon> </v-btn
                   ></v-col
                 >
                 <v-col cols="1"
                   ><v-btn variant="" text @click="sortTable('orbitCode')"
-                    >Orbit Code</v-btn
+                    >Orbit Code <v-icon>mdi-arrow-down</v-icon> </v-btn
                   ></v-col
                 >
                 <v-col cols="2"
