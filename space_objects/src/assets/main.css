@@ -141,3 +141,15 @@ a,
 .listRow {
   background-color: #333333;
 }
+.heading-bold {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.listRow {
+  border-bottom: 1px solid #ccc;
+}

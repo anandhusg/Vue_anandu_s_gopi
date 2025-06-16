@@ -30,10 +30,10 @@
     <!--Table Section -->
     <v-container>
       <v-row>
-        <v-col cols="9">
+        <v-col cols="12" md="9">
           <v-row class="mb-10 mr-1">
             <v-col class="card-border">
-              <v-row class="text mb-5">
+              <v-row class="text mb-5" >
                 <v-col cols="2"
                   ><v-btn variant="" @click="sortTable('name')">
                     Name</v-btn
@@ -349,16 +349,5 @@ function saveToLocal() {
 
 
 <style scoped>
-.heading-bold {
-  font-size: 24px;
-  font-weight: bold;
-}
 
-.text {
-  font-size: 16px;
-}
-
-.listRow {
-  border-bottom: 1px solid #ccc;
-}
 </style>
