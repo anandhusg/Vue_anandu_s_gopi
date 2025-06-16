@@ -1,7 +1,7 @@
 # Vue_anandu_s_gopi
 project for digantare
 
- for installing the project
+# for installing the project
 
  npm install
 
