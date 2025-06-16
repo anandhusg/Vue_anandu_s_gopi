@@ -100,12 +100,19 @@
               </RecycleScroller>
 
               <v-row v-else>
-                <v-col>
+                <v-col cols="12">
                   <h1>
-                    <v-img height="200px" src="https://i.gifer.com/ZZ5H.gif">
+                    <!-- <v-img height="200px" src="https://i.gifer.com/ZZ5H.gif">
+                    </v-img> -->
+                    <v-img height="200px" src="https://i.pinimg.com/originals/3e/80/39/3e8039242e517ee7edc05a4e226e0b80.gif">
                     </v-img>
+                   
                   </h1>
                 </v-col>
+                <v-col align="center" class=" sub-heading-bold pb-10">
+                  Loading...!
+                </v-col>
+
               </v-row>
             </v-col>
           </v-row>
@@ -150,7 +157,7 @@
           <v-row class="card-border mt-6">
             <v-col cols="12">
               <v-icon size="30" color="primary">mdi-check</v-icon> &nbsp;
-              <span class="sub-heading-bold"> Selected Items </span>
+              <span class="sub-heading-bold"> {{selectedItems.length}} Selected Items </span>
             </v-col>
             <v-col cols="12" v-for="(item, i) in selectedItems" :key="i">
               {{ item.name }}
